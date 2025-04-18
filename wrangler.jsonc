@@ -19,8 +19,7 @@
 	"r2_buckets": [
 		{
 			"binding": "FILES_BUCKET",
-			"bucket_name": "share-stuff-files",
-			"preview_bucket_name": "share-stuff-files-dev"
+			"bucket_name": "sloth-share"
 		}
 	]
 	/**
