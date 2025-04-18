@@ -6,10 +6,9 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "share-stuff",
 	"main": "src/index.ts",
+	"account_id": "1c787a4e7a6972171826b9c0bdd5a4ee",
 	"compatibility_date": "2025-04-18",
-	"compatibility_flags": [
-		"nodejs_compat"
-	],
+	"compatibility_flags": ["nodejs_compat"],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": "./public"
