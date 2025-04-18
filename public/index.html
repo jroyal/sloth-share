@@ -1,31 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Hello, World!</title>
-	</head>
-	<body>
-		<h1 id="heading"></h1>
-		<button id="button" type="button">Fetch a random UUID</button>
-		<output id="random" for="button"></output>
-		<script>
-			fetch('/message')
-				.then((resp) => resp.text())
-				.then((text) => {
-					const h1 = document.getElementById('heading');
-					h1.textContent = text;
-				});
-
-			const button = document.getElementById("button");
-			button.addEventListener("click", () => {
-				fetch('/random')
-					.then((resp) => resp.text())
-					.then((text) => {
-						const random = document.getElementById('random');
-						random.textContent = text;
-					});
-			});
-		</script>
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Share Stuff</title>
+	<style>
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			line-height: 1.6;
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+		}
+		.container {
+			margin-top: 40px;
+			text-align: center;
+		}
+		.upload-link {
+			display: inline-block;
+			margin-top: 20px;
+			padding: 10px 20px;
+			background-color: #4a89dc;
+			color: white;
+			text-decoration: none;
+			border-radius: 4px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>Share Stuff</h1>
+	<div class="container">
+		<p>Welcome to Share Stuff, an easy way to share your files.</p>
+		<a href="/upload" class="upload-link">Upload a File</a>
+	</div>
+</body>
 </html>
